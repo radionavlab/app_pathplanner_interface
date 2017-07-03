@@ -7,8 +7,6 @@
 bool transform(app_pathplanner_interface::PathPlanner::Request &req,
                app_pathplanner_interface::PathPlanner::Response &res)
 {
-
-
 	nav_msgs::Path output_path;
 	
 	std::vector<geometry_msgs::PoseStamped> temp_vector;
@@ -24,13 +22,13 @@ bool transform(app_pathplanner_interface::PathPlanner::Request &req,
 	res.output = output_path;
 	
 
-  ROS_INFO("request: x=%f, y=%f, z=%f", req.input.poses.at(0).position.x,
-  										req.input.poses.at(0).position.y,
-  										req.input.poses.at(0).position.z);
+  	ROS_INFO("request: x=%f, y=%f, z=%f", req.input.poses.at(0).position.x,
+  					      req.input.poses.at(0).position.y,
+  					      req.input.poses.at(0).position.z);
   										
-  ROS_INFO("sending back response: x=%f, y=%f, z=%f",	output_path.poses[0].pose.position.x,
-  														output_path.poses[0].pose.position.y,
-  														output_path.poses[0].pose.position.z);
+  	ROS_INFO("sending back response: x=%f, y=%f, z=%f", output_path.poses[0].pose.position.x,
+  						            output_path.poses[0].pose.position.y,
+  						            output_path.poses[0].pose.position.z);
 
 	return true;
 }
