@@ -35,17 +35,17 @@ int main(int argc, char **argv)
 //  srv.request.b = atoll(argv[2]);
 
 	if (client.call(srv))
-	{
+    {
 		ROS_INFO("\nx: %f\ny: %f\nz: %f", srv.response.output.poses[0].pose.position.x,
-						  srv.response.output.poses[0].pose.position.y,
-						  srv.response.output.poses[0].pose.position.z);
-	}
+                                          srv.response.output.poses[0].pose.position.y,
+                                          srv.response.output.poses[0].pose.position.z);
+    }
 	
-	else
-	{
-		ROS_ERROR("Failed to call service app_pathplanner");
-    		return 1;
-    	}
+    else
+    {
+        ROS_ERROR("Failed to call service app_pathplanner");
+        return 1;
+    }
 
-	return 0;
+    return 0;
 }

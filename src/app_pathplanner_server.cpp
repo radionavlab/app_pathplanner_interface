@@ -23,14 +23,14 @@ bool transform(app_pathplanner_interface::PathPlanner::Request &req,
 	
 
   	ROS_INFO("request: x=%f, y=%f, z=%f", req.input.poses.at(0).position.x,
-  					      req.input.poses.at(0).position.y,
-  					      req.input.poses.at(0).position.z);
+                                          req.input.poses.at(0).position.y,
+                                          req.input.poses.at(0).position.z);
   										
   	ROS_INFO("sending back response: x=%f, y=%f, z=%f", output_path.poses[0].pose.position.x,
-  						            output_path.poses[0].pose.position.y,
-  						            output_path.poses[0].pose.position.z);
+                                                        output_path.poses[0].pose.position.y,
+                                                        output_path.poses[0].pose.position.z);
 
-	return true;
+    return true;
 }
 
 int main(int argc, char **argv)
