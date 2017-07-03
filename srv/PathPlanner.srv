@@ -1,0 +1,3 @@
+geometry_msgs/PoseArray input
+---
+nav_msgs/Path output
