@@ -10,14 +10,25 @@ bool transform(app_pathplanner_interface::PathPlanner::Request &req,
 	nav_msgs::Path output_path;
 	
 	std::vector<geometry_msgs::PoseStamped> temp_vector;
-	geometry_msgs::PoseStamped temp_pose_stamped;
-	temp_vector.push_back(temp_pose_stamped);
+//	geometry_msgs::PoseStamped temp_pose_stamped;
+//	temp_vector.push_back(temp_pose_stamped);
 	
-	output_path.poses = temp_vector;
+//	output_path.poses = temp_vector;
 
-	output_path.poses[0].pose.position.x = req.input.poses.at(0).position.x;	
-	output_path.poses[0].pose.position.y = req.input.poses.at(0).position.y;
-	output_path.poses[0].pose.position.z = req.input.poses.at(0).position.z;
+    geometry_msgs::PoseArray temp_pose_array = req.input;
+    
+    for (int i = 0; i < temp_pose_array.poses.size(); i++)
+    {
+        geometry_msgs::PoseStamped temp_pose_stamped;
+        temp_pose_stamped.pose.position = temp_pose_array.poses.at(i).position;
+        temp_vector.push_back(temp_pose_stamped);
+    }
+
+   	output_path.poses = temp_vector;
+
+//	output_path.poses[0].pose.position.x = req.input.poses.at(0).position.x;	
+//	output_path.poses[0].pose.position.y = req.input.poses.at(0).position.y;
+//	output_path.poses[0].pose.position.z = req.input.poses.at(0).position.z;
 	
 	res.output = output_path;
 	
