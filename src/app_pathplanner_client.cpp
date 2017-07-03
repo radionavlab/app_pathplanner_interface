@@ -44,8 +44,8 @@ int main(int argc, char **argv)
 	else
 	{
 		ROS_ERROR("Failed to call service app_pathplanner");
-    	return 1;
-    }
+    		return 1;
+    	}
 
 	return 0;
 }
