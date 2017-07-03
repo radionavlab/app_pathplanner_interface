@@ -36,9 +36,9 @@ int main(int argc, char **argv)
 
 	if (client.call(srv))
 	{
-		ROS_INFO("\nx: %f\ny: %f\nz: %f",	srv.response.output.poses[0].pose.position.x,
-								      		srv.response.output.poses[0].pose.position.y,
-								      		srv.response.output.poses[0].pose.position.z);
+		ROS_INFO("\nx: %f\ny: %f\nz: %f", srv.response.output.poses[0].pose.position.x,
+						  srv.response.output.poses[0].pose.position.y,
+						  srv.response.output.poses[0].pose.position.z);
 	}
 	
 	else
