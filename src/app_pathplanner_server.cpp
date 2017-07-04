@@ -37,8 +37,8 @@ bool transform(app_pathplanner_interface::PathPlanner::Request &req,
 	
 	res.output = output_path;
 	
-	ROS_INFO("request: size = %f", req.input.poses.size());
-	ROS_INFO("response: size = %f", res.output.poses.size());
+	ROS_INFO("request: size = %lu", req.input.poses.size());
+	ROS_INFO("response: size = %lu", res.output.poses.size());
 
 //  	ROS_INFO("request: x=%f, y=%f, z=%f", req.input.poses.at(0).position.x,
 //                                          req.input.poses.at(0).position.y,
