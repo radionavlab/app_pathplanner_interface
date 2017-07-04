@@ -11,6 +11,6 @@ To be used with [utmg-android-interface](https://github.com/radionavlab/utmg-and
 ## Usage
 1. Run `rosrun app_pathplanner_interface app_pathplanner_server` to start the server
 2. Start client
-    * If using [utmg-android-interface](https://github.com/radionavlab/utmg-android-interface), the client should be running automatically.
+    * If using [utmg-android-interface](https://github.com/radionavlab/utmg-android-interface), be sure to enable the service connection in the app settings.
     * To use in-built C++ client for testing purposes, run `rosrun app_pathplanner_interface app_pathplanner_client`
 
