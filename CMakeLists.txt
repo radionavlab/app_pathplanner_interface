@@ -52,7 +52,8 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  PVATrajectoryStamped.msg
+  PVA_Stamped.msg
+  PVATrajectory.msg
 )
 
 ## Generate services in the 'srv' folder
